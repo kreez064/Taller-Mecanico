@@ -1,10 +1,9 @@
-from model.vehiculo import Vehiculo # Importa la clase base abstracta Vehiculo desde model.vehiculo
-from model.modelo import Modelo # Importa la clase Modelo desde model.modelo
+from model.vehiculo import Vehiculo  # Import corregido hacia el paquete model
+from model.modelo import Modelo  # Import corregido hacia el paquete model
 
-
-class Moto(Vehiculo): # Define la clase Moto que hereda de la clase abstracta Vehiculo
-    def __init__(self, patente: str, anio: int, modelo: Modelo): # Constructor de Moto que recibe patente, anio y modelo
-        super().__init__(patente, anio, modelo) # Invoca al constructor de la clase base Vehiculo
+class Moto(Vehiculo):
+    def __init__(self, patente: str, anio: int, modelo: Modelo):
+        super().__init__(patente, anio, modelo)
         
-    def tarifa_hora(self) -> int: # Implementa el metodo abstracto tarifa_hora especifico para Moto
-        return 15000 # Retorna el valor fijo de tarifa por hora para moto ($15.000)
+    def tarifa_hora(self) -> int:
+        return 15000

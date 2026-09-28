@@ -1,7 +1,16 @@
-class Marca: # Define la clase Marca para representar marcas de vehiculos
-    def __init__(self, nombre: str): # Constructor que recibe el nombre de la marca
-        self.__nombre = nombre # Asigna el nombre a un atributo privado
+class Marca:
+    def __init__(self, nombre: str):
+        self.__id=None
+        self.__nombre = nombre
 
-    @property # Decorador getter para acceder al nombre
-    def nombre(self) -> str: # Metodo getter para obtener el nombre de la marca
-        return self.__nombre # Retorna el valor del atributo privado __nombre
+    @property
+    def id(self)->int:
+        return self.__id
+
+    @id.setter
+    def id(self, valor:int)->None:
+        self.__id=valor
+
+    @property
+    def nombre(self) -> str:
+        return self.__nombre
